@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+gimport React, { useState, useEffect } from 'react';
 import { Button } from 'primereact/button';
 import { AutoComplete } from 'primereact/autocomplete';
 import { Calendar } from 'primereact/calendar';
@@ -79,7 +79,7 @@ function CascadeSelector(){
     
     return (
       <div>
-        <CascadeSelector
+        <CascadeSelect
         value={selectedCity}
         options={data}
         optionLabel={'name'}
