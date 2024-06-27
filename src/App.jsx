@@ -6,7 +6,7 @@ import  { CascadeSelect } from 'primereact/cascadeselect';
 import { Password } from 'primereact/password';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-
+import { Card } from 'primereact/card';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
@@ -110,13 +110,43 @@ function PasswordBox(){
     </div>
     );
 }
+function CardExample(){
+  
+  const header=(
+    <img alt="Card" src="https://placehold.jp/12/3d4070/ffffff/150x150.png?text=hello%20world%20&css=%7B%22border-radius%22%3A%2215px%22%2C%22background%22%3A%22%20-webkit-gradient(linear%2C%20left%20top%2C%20left%20bottom%2C%20from(%23666666)%2C%20to(%23cccccc))%22%7D" />
+    
+    );
+  const footer=(
+    <span>
+      <button className="p-button p-component p-button-primary">
+        Read more
+      </button>
+    </span>
+    );
+    
+    return (
+      <div>
+        <Card
+        title="Card Demo"
+  
+        footer={footer}
+        >
+          <p className="m-0">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ex dolor. Donec in enim ullamcorper, laoreet tortor at, auctor nibh. Mauris vel dignissim sapien, non elementum urna. Pellentesque commodo dui justo, eu blandit nulla posuere volutpat. Morbi quis nisi sed lorem accumsan imperdiet quis et nisl. Maecenas venenatis lorem ut tellus lacinia accumsan. Suspendisse et lacinia ante. Donec vitae vehicula libero.
+
+In ipsum enim, porttitor a ultricies eget, volutpat vitae erat. Duis et leo ut orci lobortis dictum. Duis eu ex non nisl pellentesque finibus. Donec ut dui et arcu efficitur vestibulum. Aliquam dictum facilisis magna, et pretium magna viverra ac. Ut dapibus augue eu massa venenatis rutrum. Nullam placerat dolor augue, vitae suscipit urna sollicitudin sed. Duis quis neque nec orci egestas feugiat.
+          </p>
+        </Card>
+      </div>
+      );
+}
 
 function App() {
 
 
   return (
     <div className="App">
-      <PasswordBox />
+      <CardExample />
       
   </div>
   );
