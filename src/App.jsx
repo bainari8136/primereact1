@@ -82,7 +82,8 @@ function CascadeSelector(){
         <CascadeSelect
         value={selectedCity}
         options={data}
-        optionLabel={'name'}
+        optionLabel={"name"}
+        optionGroupLabel={"name"}
         optionGroupChildren={['states','cities']}
         placeholder="select a city"
         onChange={(e)=>{
@@ -146,7 +147,7 @@ function App() {
 
   return (
     <div className="App">
-      <CardExample />
+      <CascadeSelector/>
       
   </div>
   );
