@@ -3,6 +3,7 @@ import { Button } from 'primereact/button';
 import { AutoComplete } from 'primereact/autocomplete';
 import { Calendar } from 'primereact/calendar';
 import  { CascadeSelect } from 'primereact/cascadeselect';
+import { Password } from 'primereact/password';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
@@ -92,13 +93,31 @@ function CascadeSelector(){
       </div>
       );
 }
+function PasswordBox(){
+  
+  const [value,setValue]=useState(null);
+  
+  return (
+    <div>
+      <Password
+      value={value}
+      onChange={(e)=>{
+        setValue(e.target.value);
+      }}
+      feedback={false}
+      tabIndex={1}
+      />
+    </div>
+    );
+}
+
 function App() {
 
 
   return (
     <div className="App">
-      <Button label="prime button " />
-      <CascadeSelector />
+      <PasswordBox />
+      
   </div>
   );
 }
